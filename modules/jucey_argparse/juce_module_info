@@ -1,0 +1,16 @@
+{
+  "id":             "jucey_argparse",
+  "name":           "3rd party classes for parsing command-line options and arguments",
+  "version":        "0.0.1",
+  "description":    "A 3rd party JUCE module for writing user friendly command-line interfaces.",
+  "website":        "https://github.com/aceaudio/JUCEY",
+  "license":        "GPL/Commercial",
+
+  "dependencies":   [ { "id": "juce_core" }],
+
+  "include":        "jucey_argparse.h",
+
+  "compile":        [ { "file": "jucey_argparse.cpp" } ],
+
+  "browse":         [ "argparse/*" ]
+}
