@@ -1,0 +1,18 @@
+{
+  "id":             "jucey_core",
+  "name":           "JUCEY core classes",
+  "version":        "0.0.1",
+  "description":    "3rd party JUCE module to extend the funcionality of the juce_core module.",
+  "website":        "https://github.com/aceaudio/JUCEY",
+  "license":        "GPL/Commercial",
+
+  "dependencies":   [],
+
+  "include":        "jucey_core.h",
+
+  "compile":        [ { "file": "jucey_core.cpp" } ],
+
+  "browse":         [ "text/*",
+                      "logging/*",
+                      "unit_test/*" ]
+}
