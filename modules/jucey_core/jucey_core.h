@@ -25,7 +25,7 @@
 #ifndef JUCEY_CORE_H_INCLUDED
 #define JUCEY_CORE_H_INCLUDED
 
-#include "juce_core.h"
+#include <juce_core/juce_core.h>
 
 namespace jucey
 {
