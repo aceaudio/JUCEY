@@ -53,10 +53,16 @@
 
 #endif // JUCE_LOG_ASSERTIONS
 
+#if JUCE_WINDOWS
+    #define JUCEY_EXPAND_VA_ARGS(x) x
+#else // JUCE_WINDOWS
+    #define JUCEY_EXPAND_VA_ARGS(...) __VA_ARGS__
+#endif // JUCE_WINDOWS
+
 #define JUCEY_COUNT_ARGS_HELPER(_10, _9, _8, _7, _6, _5, _4, _3, _2, _1, N, ...) N
 
 #define JUCEY_COUNT_ARGS(...) \
-    JUCEY_COUNT_ARGS_HELPER(__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+    JUCEY_COUNT_ARGS_HELPER(JUCEY_EXPAND_MACRO (__VA_ARGS__), 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
 
 #define expectMessageLogged_2(expr, text) \
     expectMessageLogged_3 (expr, text, juce::String())
@@ -71,7 +77,7 @@
     expectMessageNotLoggedStartingWith_3 (expr, text, juce::String())
 
 #define expectMessageLogged(...) \
-    JUCE_JOIN_MACRO (expectMessageLogged_, JUCEY_COUNT_ARGS(__VA_ARGS__)) (__VA_ARGS__)
+    JUCE_JOIN_MACRO (expectMessageLogged_, JUCEY_COUNT_ARGS (JUCEY_EXPAND_MACRO (__VA_ARGS__))) (__VA_ARGS__)
 
 #define expectMessageNotLogged(...) \
     JUCE_JOIN_MACRO (expectMessageNotLogged_, JUCEY_COUNT_ARGS(__VA_ARGS__)) (__VA_ARGS__)
