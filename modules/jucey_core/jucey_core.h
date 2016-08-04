@@ -30,7 +30,7 @@
 namespace jucey
 {
 #include "text/jucey_StringFunctions.h"
-#include "unit_test/jucey_ScopedLogger.h"
+#include "unit_test/jucey_ScopedLoggerIntercepter.h"
 #include "unit_test/jucey_UnitTest.h"
 }
 
