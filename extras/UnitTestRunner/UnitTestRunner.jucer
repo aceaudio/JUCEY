@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="UZuid1" name="UnitTestRunner" projectType="consoleapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.UnitTester" includeBinaryInAppConfig="1"
+              jucerVersion="4.2.3" defines="JUCE_DISABLE_ASSERTIONS&#10;JUCEY_UNIT_TESTS">
+  <MAINGROUP id="QAsoOg" name="UnitTestRunner">
+    <GROUP id="{1AA6D01F-375F-DBF1-BA3D-FF8F14EAF6F3}" name="Source">
+      <FILE id="V8DdCB" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="UnitTester"
+                       osxSDK="default" osxCompatibility="default" osxArchitecture="default"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="UnitTester"
+                       osxSDK="default" osxCompatibility="default" osxArchitecture="default"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="jucey_core" path="../../modules"/>
+        <MODULEPATH id="jucey_argparse" path="../../modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="UnitTestRunner"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="3"
+                       targetName="UnitTestRunner"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="jucey_core" path="../../modules"/>
+        <MODULEPATH id="jucey_argparse" path="../../modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <VS2015 targetFolder="Builds/VisualStudio2015">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="UnitTestRunner"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="UnitTestRunner"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="jucey_core" path="../../modules"/>
+        <MODULEPATH id="jucey_argparse" path="../../modules"/>
+      </MODULEPATHS>
+    </VS2015>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="jucey_argparse" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="jucey_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_LOG_ASSERTIONS="enabled"/>
+</JUCERPROJECT>
