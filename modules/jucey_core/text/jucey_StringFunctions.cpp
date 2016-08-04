@@ -73,7 +73,7 @@ juce::String StringFunctions::capitalise (const juce::String& string) noexcept
     int length = string.length();
     
     if ( ! length)
-        return juce::String::empty;
+        return juce::String();
         
     if (length == 1)
         return string.toUpperCase();
