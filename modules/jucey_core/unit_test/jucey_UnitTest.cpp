@@ -4,7 +4,7 @@
 class JuceyUnitTest : public juce::UnitTest
 {
 public:
-    JuceyUnitTest()  : juce::UnitTest ("Jucey Unit Test") {}
+    JuceyUnitTest() : juce::UnitTest ("Jucey Unit Test") {}
     
     void runTest() override
     {
@@ -27,10 +27,12 @@ public:
         //======================================================================
         beginTest ("expectJassert");
         expectJassert (jassertfalse);
+        expectJassert (jassert (false));
         
         //======================================================================
         beginTest ("expectJassertIn: jucey_UnitTest.cpp");
         expectJassertIn (jassertfalse, "jucey_UnitTest.cpp");
+        expectJassertIn (jassert (false), "jucey_UnitTest.cpp");
         
         //======================================================================
         beginTest ("expectDoesNotJassert");
@@ -43,6 +45,7 @@ public:
         //======================================================================
         beginTest ("expectDoesNotJassertIn: jucey_Other.cpp");
         expectDoesNotJassertIn (jassertfalse, "jucey_Other.cpp");
+        expectDoesNotJassertIn (jassert (false), "jucey_Other.cpp");
     }
 };
 
