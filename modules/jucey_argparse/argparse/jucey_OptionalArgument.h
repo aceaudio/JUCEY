@@ -1,6 +1,5 @@
 
-#ifndef JUCE_OPTIONALARGUMENT_H_INCLUDED
-#define JUCE_OPTIONALARGUMENT_H_INCLUDED
+#pragma once
 
 /**
     Defines the behaviour for parsing an optional argument, that is an argument 
@@ -28,5 +27,3 @@ public:
 private:    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (OptionalArgument)
 };
-
-#endif  // JUCE_OPTIONALARGUMENT_H_INCLUDED

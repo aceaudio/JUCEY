@@ -1,6 +1,5 @@
 
-#ifndef JUCE_ARGUMENT_HPP_INCLUDED
-#define JUCE_ARGUMENT_HPP_INCLUDED
+#pragma once
 
 template <typename Type>
 Argument<Type>::Argument (const juce::StringArray& names)
@@ -78,5 +77,3 @@ void Argument<Type>::clearConsumedValues()
     mNumberOfConsumedValues = 0;
     mValues.clear();
 }
-
-#endif  // JUCE_ARGUMENT_HPP_INCLUDED

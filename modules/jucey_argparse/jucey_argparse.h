@@ -22,8 +22,7 @@
  
  *******************************************************************************/
 
-#ifndef JUCEY_ARGPARSE_H_INCLUDED
-#define JUCEY_ARGPARSE_H_INCLUDED
+#pragma once
 
 #include "juce_core.h"
 
@@ -39,5 +38,3 @@ namespace jucey
 #include "argparse/jucey_OptionalArgument.hpp"
 #include "argparse/jucey_PositionalArgument.hpp"
 }
-
-#endif  // JUCEY_ARGPARSE_H_INCLUDED

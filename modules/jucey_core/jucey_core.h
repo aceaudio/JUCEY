@@ -22,8 +22,7 @@
  
  *******************************************************************************/
 
-#ifndef JUCEY_CORE_H_INCLUDED
-#define JUCEY_CORE_H_INCLUDED
+#pragma once
 
 #include <juce_core/juce_core.h>
 
@@ -33,5 +32,3 @@ namespace jucey
 #include "unit_test/jucey_ScopedLoggerIntercepter.h"
 #include "unit_test/jucey_UnitTest.h"
 }
-
-#endif // JUCEY_CORE_H_INCLUDED

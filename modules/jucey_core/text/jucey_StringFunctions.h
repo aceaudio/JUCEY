@@ -1,6 +1,5 @@
 
-#ifndef JUCEY_STRINGFUNCTIONS_H_INCLUDED
-#define JUCEY_STRINGFUNCTIONS_H_INCLUDED
+#pragma once
 
 class JUCE_API StringFunctions
 {
@@ -39,5 +38,3 @@ public:
     /** Checks whether every character in a string is upper-case. */
     static juce::String smartSubstring (const juce::String& string, int maximumLength) noexcept;
 };
-
-#endif // JUCEY_STRINGFUNCTIONS_H_INCLUDED

@@ -1,6 +1,5 @@
  
-#ifndef JUCE_ARGUMENT_H_INCLUDED
-#define JUCE_ARGUMENT_H_INCLUDED
+#pragma once
 
 /**
     Template base class for defining how to convert a command line argument into 
@@ -29,5 +28,3 @@ private:
     Type mDefaultValue;
     int mNumberOfConsumedValues;
 };
-
-#endif  // JUCE_ARGUMENT_H_INCLUDED

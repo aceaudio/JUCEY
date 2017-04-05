@@ -1,6 +1,5 @@
 
-#ifndef JUCE_ARGUMENTPARSER_H_INCLUDED
-#define JUCE_ARGUMENTPARSER_H_INCLUDED
+#pragma once
 
 /**
     Deals with parsing command line arguments to corrsponding optional and
@@ -26,5 +25,3 @@ private:
     juce::Array<ArgumentBase*> mOptionalArguments;
     juce::Array<ArgumentBase*> mPositionalArguments;
 };
-
-#endif  // JUCE_ARGUMENTPARSER_H_INCLUDED

@@ -1,6 +1,5 @@
 
-#ifndef JUCE_OPTIONALARGUMENT_HPP_INCLUDED
-#define JUCE_OPTIONALARGUMENT_HPP_INCLUDED
+#pragma once
 
 template <typename Type>
 OptionalArgument<Type>::OptionalArgument (const juce::String& name)
@@ -74,5 +73,3 @@ juce::StringArray OptionalArgument<Type>::parseKnownArgs (const ArgumentParser& 
     Argument<Type>::finishConsuming();
     return unknownArgs;
 }
-
-#endif  // JUCE_OPTIONALARGUMENT_HPP_INCLUDED

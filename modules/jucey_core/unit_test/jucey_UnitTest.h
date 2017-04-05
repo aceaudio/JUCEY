@@ -1,6 +1,5 @@
 
-#ifndef JUCEY_UNITTEST_H_INCLUDED
-#define JUCEY_UNITTEST_H_INCLUDED
+#pragma once
 
 #if JUCE_LOG_ASSERTIONS
 
@@ -87,5 +86,3 @@
 #define expectDoesNotJassertIn(expr, file) \
     expectMessageNotLoggedStartingWith (expr, "JUCE Assertion failure in " file, \
                                        "Expected: does not jassert in " file " , Actual: does jassert in " file)
-
-#endif // JUCEY_UNITTEST_H_INCLUDED

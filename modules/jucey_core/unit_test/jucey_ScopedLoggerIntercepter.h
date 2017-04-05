@@ -1,6 +1,5 @@
 
-#ifndef JUCEY_SCOPEDLOGGERINTERCEPTER_H_INCLUDED
-#define JUCEY_SCOPEDLOGGERINTERCEPTER_H_INCLUDED
+#pragma once
 
 /**
     Intercepts messages sent to the global logger during the lifetime of this
@@ -60,5 +59,3 @@ private:
     juce::StringArray messages;
     bool shouldForwardMessagesOnExitFlag;
 };
-
-#endif // JUCEY_SCOPEDLOGGER_H_INCLUDED
