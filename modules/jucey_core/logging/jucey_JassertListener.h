@@ -48,7 +48,7 @@ public:
                         int onLineNumber = -1) const;
     
     /** Discards any previosuly captured jassert events, such that
-        `getNumJasserts` will return 0.
+        `getNumJasserts()` will return 0.
      
         @see getNumJasserts
      */
@@ -67,6 +67,8 @@ private:
     juce::Logger* logger {};
     juce::StringArray messages;
     juce::Array<Jassertion> jassertions;
+    
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JassertListener)
 };
 
 #else // JUCE_LOG_ASSERTIONS
