@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="UZuid1" name="UnitTestRunner" projectType="consoleapp" version="1.0.0"
               bundleIdentifier="com.yourcompany.UnitTester" includeBinaryInAppConfig="1"
-              jucerVersion="4.2.3" defines="JUCE_DISABLE_ASSERTIONS&#10;JUCEY_UNIT_TESTS">
+              jucerVersion="5.4.3" defines="JUCE_DISABLE_ASSERTIONS&#10;JUCEY_UNIT_TESTS">
   <MAINGROUP id="QAsoOg" name="UnitTestRunner">
     <GROUP id="{1AA6D01F-375F-DBF1-BA3D-FF8F14EAF6F3}" name="Source">
       <FILE id="V8DdCB" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
@@ -11,10 +11,8 @@
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="UnitTester"
-                       osxSDK="default" osxCompatibility="default" osxArchitecture="default"/>
-        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="UnitTester"
-                       osxSDK="default" osxCompatibility="default" osxArchitecture="default"/>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="UnitTester"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="UnitTester"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
@@ -52,7 +50,10 @@
   <MODULES>
     <MODULE id="jucey_argparse" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="jucey_core" showAllCode="1" useLocalCopy="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
-  <JUCEOPTIONS JUCE_LOG_ASSERTIONS="enabled"/>
+  <JUCEOPTIONS JUCE_LOG_ASSERTIONS="1"/>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
