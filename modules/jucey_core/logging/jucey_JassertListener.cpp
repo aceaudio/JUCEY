@@ -1,4 +1,4 @@
-#if JUCE_LOG_ASSERTIONS
+#if JUCE_LOG_ASSERTIONS || JUCE_DEBUG
 
 JassertListener::JassertListener() noexcept
     : logger (juce::Logger::getCurrentLogger())
@@ -73,7 +73,7 @@ void JassertListener::clearJasserts()
     jassertions.clear();
 }
 
-#endif // JUCE_LOG_ASSERTIONS
+#endif // JUCE_LOG_ASSERTIONS || JUCE_DEBUG
 
 #ifdef JUCEY_UNIT_TESTS
 
@@ -108,6 +108,7 @@ public:
         
         //======================================================================
         beginTest ("getNumJasserts 2");
+        
         jassert (false);
         expect (jassertListener.getNumJasserts() == 2);
         expect (jassertListener.getNumJasserts (true) == 2);
@@ -137,6 +138,7 @@ public:
         
         //======================================================================
         beginTest ("JUCE multi-threaded jasserts");
+        
         jassertListener.clearJasserts();
         
         juce::WaitableEvent hasTriggeredJassert;
@@ -148,6 +150,7 @@ public:
         
         //======================================================================
         beginTest ("STL multi-threaded jasserts");
+        
         jassertListener.clearJasserts();
         
         std::thread stdThread ([](){ jassertfalse; });
@@ -158,6 +161,7 @@ public:
       
         //======================================================================
         beginTest ("destructor");
+        
         jassertListener.clearJasserts();
         
         {

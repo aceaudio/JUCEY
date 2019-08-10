@@ -1,13 +1,13 @@
 
 #pragma once
 
-#if JUCE_LOG_ASSERTIONS
+#if JUCE_LOG_ASSERTIONS || JUCE_DEBUG
 
 /** Listens to and captures jassert events by monitoring logger messages.
 
-    NOTE:   JUCE_LOG_ASSERTIONS must be enabled for this class to function
-            correctly. juce::Logger::setCurrentLogger() mustn't be called during
-            the lifetime of this object.
+    NOTE:   JUCE_LOG_ASSERTIONS or JUCE_DEBUG must be enabled for this class to
+            function correctly. juce::Logger::setCurrentLogger() mustn't be
+            called during the lifetime of this object.
  */
 class JassertListener : private juce::Logger
 {
@@ -71,9 +71,9 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JassertListener)
 };
 
-#else // JUCE_LOG_ASSERTIONS
+#else // JUCE_LOG_ASSERTIONS || JUCE_DEBUG
 
 #define JassertListener \
-    static_assert (false, "Enable JUCE_LOG_ASSERTIONS to use the JassertListener class");
+    static_assert (false, "Enable JUCE_LOG_ASSERTIONS or JUCE_DEBUG to use the JassertListener class");
 
-#endif // JUCE_LOG_ASSERTIONS
+#endif // JUCE_LOG_ASSERTIONS || JUCE_DEBUG
